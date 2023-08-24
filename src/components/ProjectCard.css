@@ -1,0 +1,41 @@
+.website-logo{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.project-links-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+}
+.all-links-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+
+.project-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.here-link{
+    color: rgb(74, 74, 169);
+    text-decoration: underline;
+}
+
+.project-info-div{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

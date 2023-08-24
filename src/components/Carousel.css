@@ -1,0 +1,64 @@
+.carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden; /* Hide overflow to create sliding effect */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+.slide {
+  box-shadow: 0px 0px 7px #666;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px #555);
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: black;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  scale: 130%;
+}
+
+.indicator-inactive {
+  background-color: white;
+  scale: 100%;
+}
