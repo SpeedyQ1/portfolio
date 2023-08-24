@@ -41,7 +41,7 @@ import react from "../assets/react.svg";
 import ProjectCard from "./ProjectCard";
 import Loader from "./Loader";
 import SocialCard from "./SocialCard";
-import BackToTopBtn from "./backToTopBtn";
+import BackToTopBtn from "./BackToTopBtn";
 
 function Home() {
   const proPertyObj = {
