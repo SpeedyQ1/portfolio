@@ -3,6 +3,7 @@ import "./ProjectCard.css";
 import ProPertyCarousel from "./ProPertyCarousel";
 import github from "../assets/github.png";
 import websiteLogo from "../assets/websiteLogo.png";
+import 'animate.css';
 
 function ProjectCard({ project }) {
   const formattedDescription = project.description
@@ -28,7 +29,7 @@ function ProjectCard({ project }) {
       </div>
 
       <div className="project-links-section">
-        <h2 style={{ marginBottom: "20px" }}>check it yourself</h2>
+        <h2 style={{ marginBottom: "20px"}}>check it yourself</h2>
         <div className="all-links-div">
           <div className="project-links">
             <a href={project.url} target="_blank">

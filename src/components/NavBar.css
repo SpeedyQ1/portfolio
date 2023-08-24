@@ -9,7 +9,7 @@
 nav {
   display: flex;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: #810000;
   height: 80px;
   width: 100%;
   color: white;
@@ -70,7 +70,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--main-color);
+    background-color: #810000;
     align-items: center;
     height: 80px;
     position: fixed;
@@ -98,10 +98,7 @@ a {
     justify-content: center;
   }
 
-  .link-div .active {
-    border-bottom: 3px solid red;
-  }
-
+ 
   .link-div::before {
     position: absolute;
     top: 0;
@@ -120,7 +117,7 @@ a {
     display: flex;
     flex-direction: column;
     height: fit-content;
-    top: -114px;
+    top: -129px;
     padding-top: 10px;
     padding-bottom: 10px;
     transition-duration: 1s;
