@@ -44,10 +44,26 @@
   font-family: "Merriweather", serif;
   font-size: 6rem;
 }
-.h2-title-home {
-  font-family: "Merriweather", serif;
-  font-size: 3.5rem;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
+
+.h2-title-home {
+  font-size: 3.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(29) infinite ;
+}
+
+
+
+
+
 
 .sahar-title {
   color: white;
@@ -201,3 +217,4 @@
     margin-top: 0px;
   }
 }
+
