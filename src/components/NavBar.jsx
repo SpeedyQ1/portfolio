@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import logo from "./../assets/AshLogo.png";
 import { useNavigate } from "react-router-dom";
 import { Link, Element } from "react-scroll";
+import SocialCard from "./SocialCard";
 
 import "./NavBar.css";
 
@@ -39,16 +40,31 @@ function NavBar() {
         <div className="link-div">
           <Link
             className="link"
-            to={"top-of-the-page"}
+            to={"technologies"}
             spy={true}
             smooth={true}
             offset={-120}
             duration={500}
             onClick={() => setIsActive(false)}
           >
-            Home
+            Technologies
           </Link>
         </div>
+
+        <div className="link-div">
+          <Link
+            className="link"
+            to={"projects-section"}
+            spy={true}
+            smooth={true}
+            offset={-120}
+            duration={500}
+            onClick={() => setIsActive(false)}
+          >
+            Projects
+          </Link>
+        </div>
+
         <div className="link-div">
           <Link
             to="education-section"
@@ -62,19 +78,7 @@ function NavBar() {
             Education
           </Link>
         </div>
-        <div className="link-div">
-          <Link
-            className="link"
-            to={"technologies"}
-            spy={true}
-            smooth={true}
-            offset={-120}
-            duration={500}
-            onClick={() => setIsActive(false)}
-          >
-            Technologies
-          </Link>
-        </div>
+        {isActive && <SocialCard />}
       </nav>
     </>
   );

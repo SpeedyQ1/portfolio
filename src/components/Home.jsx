@@ -46,14 +46,18 @@ import BackToTopBtn from "./BackToTopBtn";
 function Home() {
   const proPertyObj = {
     title: "ProPerty",
-    description: `"ProPerty" is one of my initial React projects, focused solely on front-end development. Serving as a real estate web application, it highlights my proficiency in crafting engaging user interfaces. By utilizing a JSON file containing various real properties, the app offers a streamlined platform for property exploration. Users can easily refine and organize property options based on their preferences. This project underscores my dedication to constructing interactive and user-centric interfaces, setting the stage for further advancements in web development`,
+    description: `"ProPerty" represents my initial independent, full-scale React project, focusing solely on front-end development. The objective was to create an efficient property exploration platform using real-time API data extraction of real estate listings, enabling users to effortlessly discover relevant properties through intuitive filtering options. Functioning as a real estate web application, it highlights my skill in designing user-friendly interfaces by leveraging a JSON file with diverse API-fetched property data.`,
+    shortDescription: "real-estate web-app",
+
     images: [ProPertyImg1, ProPertyImg2, ProPertyImg3],
     url: "https://ash-pro-perty.netlify.app/",
     gitHubUrl: "https://github.com/SpeedyQ1/ProPerty",
   };
   const cvObj = {
-    title: "Cv Generator",
-    description: `My first real full-stack project, the "CV Generator" project, melded React and MongoDB. The current MVP scope offers two layout templates to choose from, Input your info, and download your CV in PDF format instantly. Manage, edit, and download all your resumes with ease. (not mobile responsive)`,
+    title: "CV",
+    shortDescription: "CV generator",
+    description: `My first real full-stack project was to create a web tool for formulating CV personal information using predesigned templates and enabling users to download and print their designed CV forms. The "CV Generator" project, melded React and MongoDB. The current MVP scope offers two layout templates to choose from, Input your info, and download your CV in PDF format instantly. Manage, edit, and download all your resumes with ease. (not mobile responsive)
+    In this project, I implemented DB-based secured user authentication and user CV storage.`,
     images: [CvImg1, CvImg2, CvImg3],
     url: "https://ash-cv-generator.netlify.app/",
     gitHubUrl: "https://github.com/SpeedyQ1/cvsClient",
@@ -61,7 +65,8 @@ function Home() {
   };
   const mindGamesObj = {
     title: "MindGames",
-    description: `During the middle project of my bootcamp at Cyberpro, for a week I worked with another student to develop "MindGames," a frontend-only web app for buying and selling lecture tickets. Leveraging GitHub, we ensured a seamless partnership while crafting an intuitive platform. Notably, user sign-up and login used local storage, and data wasn't stored permanently `,
+    shortDescription: "selling tickets platform",
+    description: `For the mid term project, my partner and I aimed to create "MindGames," a frontend-only web app for buying and selling tickets for letures. We invested a week's work into it, everaging GitHub, we ensured a seamless partnership while crafting an intuitive platform. Notably, user sign-up and login used temporary local storage. We also created internal API to present dynamic information for users`,
     images: [
       MindGamesImg1,
       MindGamesImg2,
@@ -74,11 +79,12 @@ function Home() {
   };
   const LonelySoldier = {
     title: "lone soldier",
-    description: `During a 48-hour bootcamp hackathon, my partner and I created "lone soldier," a frontend-only web app designed for volunteers and lonely soldiers. It was a unique endeavor, as the continuous 48-hour work session took place at the college The intense coding marathon, fueled by GitHub collaboration, resulted in a unique project.  This project reflects the dedication of a non-stop coding session. 
-    I didnt change te final result so you can see what we acomplished after 48 hours.
-    To experience it, sign up as a volunteer or log in using the provided credentials for a soldier's perspective.
+    shortDescription: "Volunteer 2 sided platform",
+    description: `In this project, our goal was to provide a solution for the painful problem of civil support for IDF-lonely soldiers. The idea and implementation were done within a 48-hour hackathon in which we built a platform for IDF Lonly Soldiers to hook up with volunteering individuals and adopting families.
+
+    The website offers dual registration and login options for both parties and the ability for lonely soldiers to filter and search for the volunteers in context and the type of support they need using location and volunteer profile variables.
     
-    Notably, the sign-up and login functionalities were enabled through local storage, with data not being permanently stored `,
+    In the presentation event, our project and team were highly commanded by the program’s managers and our peer teams.`,
     images: [
       LonelySoldierImg1,
       LonelySoldierImg2,
@@ -100,10 +106,8 @@ function Home() {
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
-
   }, []);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -119,7 +123,6 @@ function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   const projects = [proPertyObj, LonelySoldier, cvObj, mindGamesObj];
   return (
@@ -149,44 +152,15 @@ function Home() {
         <h2 className="h2-title-home">Full-Stack Developer</h2>
         <div id="social-media-div">
           <SocialCard />
-          Contact Me Any Time
+          Let's Talk 😉
         </div>
       </div>
       <div id="home-big-img-div">
         <img id="home-big-img" src={backgroundImg} alt="" />
       </div>
-      <div id="projects-section">
-        {projects.map((project, index) => (
-          <div key={index}>
-            <ProjectCard project={project} />
-          </div>
-        ))}
-      </div>
-
-      <div id="education-section">
-        <h1 className="edu-info">E d u c a t i o n</h1>
-        <div className="edu-container">
-          <div className="edu-div">
-            <h3 className="edu-info">
-              Fullstack development bootcamp, CyberPro , Ramat Gan.
-            </h3>
-            <span className="hours-year">
-              <h4 className="edu-info">700+ hours</h4>
-              <h4 className="edu-info">2023</h4>
-            </span>
-          </div>
-          <div className="edu-div">
-            <h3 className="edu-info">
-              High school majors (5 units): Mathematics, Physics, Computer
-              Science, and English
-            </h3>
-            <h4 className="edu-info">2020</h4>
-          </div>
-        </div>
-      </div>
 
       <div id="technologies">
-        <h1 className="edu-info">T e c h n o l o g i e s</h1>
+        <h1 className="edu-info edu-info-title">T e c h n o l o g i e s</h1>
         <div className="technologies-container">
           <div className="tech-div">
             <img className="tech" src={html} alt="" />
@@ -223,6 +197,36 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div id="projects-section">
+        {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+        ))}
+      </div>
+
+      <div id="education-section">
+        <h1 className="edu-info edu-info-title">E d u c a t i o n</h1>
+        <div className="edu-container">
+          <div className="edu-div">
+            <h3 className="edu-info">
+              Fullstack development bootcamp, CyberPro , Ramat Gan.
+            </h3>
+            <span className="hours-year">
+              <h4 className="edu-info">700+ hours</h4>
+              <h4 className="edu-info">2023</h4>
+            </span>
+          </div>
+          <div className="edu-div">
+            <h3 className="edu-info">
+              High school majors (5 units): Mathematics, Physics, Computer
+              Science, and English
+            </h3>
+            <h4 className="edu-info">2020</h4>
+          </div>
+        </div>
+      </div>
+
+      
     </div>
   );
 }

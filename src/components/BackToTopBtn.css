@@ -11,7 +11,7 @@ a {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  background-color: rgba(29, 29, 31, 0.7);
+  background-color: #81000090;
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   display: flex;
