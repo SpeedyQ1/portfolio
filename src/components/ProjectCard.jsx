@@ -6,6 +6,11 @@ import websiteLogo from "../assets/websiteLogo.png";
 import "animate.css";
 import upArrow from "../assets/upArrow.png";
 import downArrow from "../assets/downArrow.png";
+import StorageIcon from "@mui/icons-material/Storage";
+import SourceIcon from "@mui/icons-material/Source";
+import LanguageIcon from '@mui/icons-material/Language';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 function ProjectCard({ project }) {
   const [readMore, setReadMore] = useState(false);
@@ -35,12 +40,37 @@ function ProjectCard({ project }) {
             }
           >
             {formattedDescription}
+
+            <h2 className="technical-details-title">Technical Details</h2>
+            <div className="project-details">
+              <div className="library-section details">
+                <SourceIcon />
+                <h3> Libraries</h3>
+                {project?.libraries.map((item, index) => (
+                  <div key={index}>{item}</div>
+                ))}
+              </div>
+              <div className="data-storage-section details">
+                <StorageIcon />
+                <h3>Data Storage </h3>
+                {project?.dataStorage.map((item, index) => (
+                  <div key={index}>{item}</div>
+                ))}
+              </div>
+
+              <div className="time-section details">
+                <AccessTimeIcon />
+                <h3>Dev Duration </h3>
+                {project?.time}
+              </div>
+            </div>
+
             <div className="project-links-section">
               <h2 style={{ marginBottom: "20px" }}>check it yourself</h2>
               <div className="all-links-div">
                 <div className="project-links">
                   <a href={project.url} target="_blank">
-                    <img className="website-logo" src={websiteLogo} />
+                    <LanguageIcon/>
                   </a>
                   <h3>
                     for the website, click{" "}
@@ -51,7 +81,7 @@ function ProjectCard({ project }) {
                 </div>
                 <div className="project-links">
                   <a href={project.gitHubUrl} target="_blank">
-                    <img className="website-logo" src={github} />
+                    <GitHubIcon/>
                   </a>
                   <h3>
                     for the git repository, click{" "}
@@ -63,7 +93,7 @@ function ProjectCard({ project }) {
                 {project?.gitHubBack && (
                   <div className="project-links">
                     <a href={project.gitHubUrl} target="_blank">
-                      <img className="website-logo" src={github} />
+                      <GitHubIcon/>
                     </a>
                     <h3>
                       for the git back-end repository, click{" "}
@@ -76,10 +106,7 @@ function ProjectCard({ project }) {
               </div>
             </div>
           </div>
-          <div
-            className="read-more-btn"
-            onClick={() => setReadMore(!readMore)}
-          >
+          <div className="read-more-btn" onClick={() => setReadMore(!readMore)}>
             {readMore ? (
               <div className="read-more-btn-div">
                 {" "}

@@ -48,7 +48,9 @@ function Home() {
     title: "ProPerty",
     description: `"ProPerty" represents my initial independent, full-scale React project, focusing solely on front-end development. The objective was to create an efficient property exploration platform using real-time API data extraction of real estate listings, enabling users to effortlessly discover relevant properties through intuitive filtering options. Functioning as a real estate web application, it highlights my skill in designing user-friendly interfaces by leveraging a JSON file with diverse API-fetched property data.`,
     shortDescription: "real-estate web-app",
-
+    libraries: ["react-router-dom", "react-carousel", "mui-material"],
+    dataStorage: ["local storage", "JSON"],
+    time: "4 days",
     images: [ProPertyImg1, ProPertyImg2, ProPertyImg3],
     url: "https://ash-pro-perty.netlify.app/",
     gitHubUrl: "https://github.com/SpeedyQ1/ProPerty",
@@ -58,6 +60,9 @@ function Home() {
     shortDescription: "CV generator",
     description: `My first real full-stack project was to create a web tool for formulating CV personal information using predesigned templates and enabling users to download and print their designed CV forms. The "CV Generator" project, melded React and MongoDB. The current MVP scope offers two layout templates to choose from, Input your info, and download your CV in PDF format instantly. Manage, edit, and download all your resumes with ease. (not mobile responsive)
     In this project, I implemented DB-based secured user authentication and user CV storage.`,
+    libraries: ["react-router-dom", "cloudinary", "JSON-web-token", "bcrypt"],
+    dataStorage: ["MongoDb"],
+    time: "one week",
     images: [CvImg1, CvImg2, CvImg3],
     url: "https://ash-cv-generator.netlify.app/",
     gitHubUrl: "https://github.com/SpeedyQ1/cvsClient",
@@ -67,6 +72,9 @@ function Home() {
     title: "MindGames",
     shortDescription: "selling tickets platform",
     description: `For the mid term project, my partner and I aimed to create "MindGames," a frontend-only web app for buying and selling tickets for letures. We invested a week's work into it, everaging GitHub, we ensured a seamless partnership while crafting an intuitive platform. Notably, user sign-up and login used temporary local storage. We also created internal API to present dynamic information for users`,
+    libraries: ["react-router-dom", "icons-material", "emailjs" , "react-calender"],
+    dataStorage: ["local storage" , "JSON"],
+    time: "one week",
     images: [
       MindGamesImg1,
       MindGamesImg2,
@@ -81,10 +89,22 @@ function Home() {
     title: "lone soldier",
     shortDescription: "Volunteer 2 sided platform",
     description: `In this project, our goal was to provide a solution for the painful problem of civil support for IDF-lonely soldiers. The idea and implementation were done within a 48-hour hackathon in which we built a platform for IDF Lonly Soldiers to hook up with volunteering individuals and adopting families.
-
     The website offers dual registration and login options for both parties and the ability for lonely soldiers to filter and search for the volunteers in context and the type of support they need using location and volunteer profile variables.
     
-    In the presentation event, our project and team were highly commanded by the program’s managers and our peer teams.`,
+    In the presentation event, our project and team were highly commanded by the program’s managers and our peer teams. // To log in as a soldier use the e-mail: guest@guest, password: 1234 //`,
+    libraries: [
+      "react-router-dom",
+      "mui-material",
+      "bootstrap",
+      "emailJs",
+      "mdb-react-ui-kit",
+      "react-dropzone",
+      "react-hook-form",
+      "react-toastify",
+    ],
+    dataStorage: ["local storage", "JSON"],
+    time: "48 hours straight",
+
     images: [
       LonelySoldierImg1,
       LonelySoldierImg2,
@@ -200,7 +220,7 @@ function Home() {
 
       <div id="projects-section">
         {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
 
@@ -225,8 +245,6 @@ function Home() {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 }
